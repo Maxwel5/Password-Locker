@@ -48,6 +48,12 @@ class Credentials:
         '''
         Credential.save_credential(credential)
 
+    def del_credential(credential):
+        '''
+        Function to delete credentials that are not needede in the app.
+        '''
+        credential.delete_credential()
+
     def view_credentials(user_name):
         '''
         Function to view the saved credentials by the user
