@@ -118,6 +118,21 @@ class TestIUser(unittest.TestCase):
 
         self.assertTrue(user_exists)
 
+    @classmethod
+    def user_exist(cls,number):
+        '''
+        Method that checks if the user exists from the user list.
+        Args:
+            username: Username to search if it exists
+        Returns :
+            Boolean: True or false depending if the user exists
+        '''
+        for user in cls.user_list:
+            if user.user_name == username:
+                    return True
+
+        return False
+
 if __name__ ==  '__main__':
     unittest.main()
 
