@@ -41,4 +41,10 @@ class Credentials:
         '''
         new_credential = Credential(user_name,account_name,password)
         return new_credential
+
+    def save_credential(credential):
+        '''
+        Saving the new credentials in the function
+        '''
+        Credential.save_credential(credential)
          
