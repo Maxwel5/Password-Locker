@@ -1,16 +1,21 @@
+#!/usr/bin/env python3.6
+import pyperclip
+from user import User
+
 class User:
-    '''
-    This class will generate new instance of the user
-    '''
+    # Providing user details
 
-    def __init__(self,fname,lname,userName,psword):
+    def user_details(self,fname,lname,username,psword):
 
         '''
-        __init__method aid in defining the properties of the objects
-        
-        Args:
-            fname: New user first name
-            lname: New user last name
-            userName: New user user name
-            psw: New user passwod
+        Improvised function for crearing new user details 
         '''
+        new_user = User(self,fname,lname,username,psword)
+        return new_user
+
+    def save_user(user):
+        '''
+        Function to save/store new user details
+        '''
+        User.save_user
+         
