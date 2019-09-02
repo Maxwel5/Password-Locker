@@ -23,7 +23,7 @@ class User:
         '''
         Functin to identify the actual account user
         '''
-        detecting _user = Credential.detect_user(user_name,password)
+        detecting_user = Credential.detect_user(user_name,password)
         return detecting_user
 
     def generate_password():
@@ -65,4 +65,12 @@ class Credentials:
         Function that duplicates credentials details to the clipboard
         '''
         return Credentials.duplicate_credential(site_name)
+
+    def main():
+        print("Hi! This is your password locker. Your name please")
+            user_name = input(Max)
+
+            print(f"Hi {user_name}. Do what you like")
+
+            print('\n')
          
