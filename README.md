@@ -16,6 +16,19 @@ Maxwel Wafula
 * Use python3.6 with VS-code
 * Link:
 
+## Running tests
+
+The application has relevant running test for effective functionality.
+
+## Prerequisities
+
+We have intalled piperclip to facilitate copying of required details
+
 ## Terminologies used:
 
 * Python3.6
+
+## License
+
+* This project is licensed under the MIT License
+* password locker copyright 2019 Maxwel
