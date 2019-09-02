@@ -1,5 +1,4 @@
 #!/usr/bin/env python3.6
-import pyperclip
 
 class User:
   def __init__(self, fname, lname):
@@ -34,6 +33,13 @@ class Credential(User):
         Function to save/store new user details
         '''
         User.save_list.append(self)
+
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
 
 #     def justify_user(user_name,password):
 #         '''
