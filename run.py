@@ -6,3 +6,9 @@ def create_user(fname,lname,username,password):
     '''
     new_user = User(fname,lname,username,password)
     return new_user
+
+def save_users(user):
+    '''
+    Function to save user
+    '''
+    user.save_user()
