@@ -47,4 +47,10 @@ class Credentials:
         Saving the new credentials in the function
         '''
         Credential.save_credential(credential)
+
+    def view_credentials(user_name):
+        '''
+        Function to view the saved credentials by the user
+        '''
+        return Credential.view_credentials(user_name)
          
