@@ -18,3 +18,15 @@ def del_user(user):
     Function to delete a user
     '''
     user.delete_user()
+
+def find_user(username):
+    '''
+    Function that finds the user by username and returns the user
+    '''
+    return User.find_by_username(username)
+
+def check_existing_users(username):
+    '''
+    Function that check if a user exists with that usename and return a Boolean
+    '''
+    return User.user_exist(username)
