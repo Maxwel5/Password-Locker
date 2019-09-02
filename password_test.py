@@ -151,6 +151,11 @@ class TestIUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.password,pyperclip.paste())
 
+    @classmethod
+    def copy_password(cls,username):
+        user_found = User.find_by_username(username)
+        pyperclip.copy(user_found.password)
+
 if __name__ ==  '__main__':
     unittest.main()
 
