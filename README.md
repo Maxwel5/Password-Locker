@@ -1,6 +1,6 @@
 ## Project name:
 
-### Password Locker
+ Password Locker
 
 ## Description:
 
@@ -14,7 +14,7 @@ Maxwel Wafula
 
 * Open terminal(Ctrl+Alt+t)
 * Use python3.6 with VS-code
-* Link:
+* Link: https://github.com/Maxwel5/Password-Locker.git
 
 ## Running tests
 
