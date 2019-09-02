@@ -33,5 +33,12 @@ class User:
         generate_password = Credential.generate_password()
         return generate_password
 
-c
+class Credentials:
+    # Credentials details
+    def credential_details(user_name,account_name,password):
+        '''
+        Credential function
+        '''
+        new_credential = Credential(user_name,account_name,password)
+        return new_credential
          
