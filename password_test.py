@@ -89,6 +89,21 @@ class TestIUser(unittest.TestCase):
         found_user = User.find_by_username("Max")
 
         self.assertEqual(found_user.password,test_user.password)
+    
+    @classmethod
+    def find_by_username(cls,username):
+        '''
+        Method that takes in a username and returns a user that matches that username.
+
+        Args:
+            username: Username to search for
+        Returns :
+            User of person that matches the username.
+        '''
+
+        for contact in cls.contact_list:
+            if contact.phone_number == number:
+                return contact
 
 if __name__ ==  '__main__':
     unittest.main()
