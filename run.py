@@ -24,7 +24,7 @@ def find_user(username):
     '''
     Function that finds the user by username and returns the user
     '''
-    return User.find_by_username(username)
+    return users.find_by_username(username)
 
 def check_existing_users(username):
     '''
@@ -60,15 +60,15 @@ def main():
             f_name = input()
 
             print ("Last name ...")
-            f_name = input()
+            l_name = input()
 
             print ("User name ...")
-            f_name = input()
+            u_name = input()
 
             print ("password ...")
             pwd = input()
 
-            save_users(create_user(f_name,l_name,u_name,psword))
+            save_users(create_user(f_name,l_name,u_name,pwd))
 
             print ('\n')
             print(f"New User {f_name} {l_name} created")
@@ -94,8 +94,8 @@ def main():
             
             print("Enter user name you want to find")
                     
-            search_user = input()
-            if check_existing_user(search_username):
+            search_username = input()
+            if check_existing_users(search_username):
 
                 search_user = find_user(search_username)
 
@@ -110,13 +110,17 @@ def main():
             else:
                 print("The contact does not exist")
 
-        elif: short_code == "ex":
+        elif short_code == "ex":
+            
+            # if able to execute the short_code
                 print("bye-bye .......")
                 break
-            else:
+        else:
                 print("I mean, didn't get it. Can you please use the short codes")
 
 if __name__ == '__main__':
-
     main()
+
+
+    
 

@@ -13,17 +13,17 @@ class TestIUser(unittest.TestCase):
         '''
         A method that runs before each test cases.
         '''
-        self.new_user = User("Maxwel","Wafula","Max","9876")
+        self.new_user = User(" "," "," "," ")
 
     def test_init(self):
         '''
         test_init checks for proper initializing of objects
         '''
 
-    self.assertEqual(self.new_user.first_name,"Maxwel")
-    self.assertEqual(self.new_user.last_name,"Wafulal")
-    self.assertEqual(self.new_user.user_name,"Max")
-    self.assertEqual(self.new_user.password,"9876")
+    self.assertEqual(self.new_user.first_name," ")
+    self.assertEqual(self.new_user.last_name," ")
+    self.assertEqual(self.new_user.user_name," ")
+    self.assertEqual(self.new_user.password," ")
 
     def test_save_user(self):
         '''
@@ -39,7 +39,7 @@ class TestIUser(unittest.TestCase):
         objects to our user_list
         '''
         self.new_user.save_user()
-        test_user = User("Test","user","Max","9876") 
+        test_user = User("Test","user"," "," ") 
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
@@ -55,7 +55,7 @@ class TestIUser(unittest.TestCase):
             objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","Max","9876") 
+            test_user = User("Test","user"," "," ") 
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
 
@@ -64,7 +64,7 @@ class TestIUser(unittest.TestCase):
         test_delete_user to try if we can delete a user from our user list
         '''
         self.new_user.save_user()
-        test_user = User("Test","user","Max","9876")
+        test_user = User("Test","user"," "," ")
         test_user.save_user()
 
         self.new_user.delete_user()
@@ -84,10 +84,10 @@ class TestIUser(unittest.TestCase):
         '''
 
         self.new_user.save_user()
-        test_user = User("Test","user","Max","9876") 
+        test_user = User("Test","user"," "," ") 
         test_user.save_user()
 
-        found_user = User.find_by_username("Max")
+        found_user = User.find_by_username(" ")
 
         self.assertEqual(found_user.password,test_user.password)
     
@@ -120,7 +120,7 @@ class TestIUser(unittest.TestCase):
         self.assertTrue(user_exists)
 
     @classmethod
-    def user_exist(cls,number):
+    def user_exist(cls,username):
         '''
         Method that checks if the user exists from the user list.
         Args:

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+import pyperclip
 
 class User:
     def __init__(self, fname, lname):
