@@ -27,12 +27,13 @@ class Credential(User):
         '''
         new_user = User(self,fname,lname,username,psword)
         return new_user
+user_list = []
 
-    def save_user(user):
+    def save_user(self):
         '''
         Function to save/store new user details
         '''
-        User.save_user
+        User.save_list.append(self)
 
     def justify_user(user_name,password):
         '''
