@@ -5,7 +5,7 @@ from user import User
 class User:
     # Providing user details
 
-    def user_details(self,fname,lname,username,psword):
+    def create_user(self,fname,lname,username,psword):
 
         '''
         Improvised function for crearing new user details 
@@ -68,9 +68,32 @@ class Credentials:
 
     def main():
         print("Hi! This is your password locker. Your name please")
-            user_name = input(Max)
+            user_name = input()
 
             print(f"Hi {user_name}. Do what you like")
 
             print('\n')
+
+            while True:
+                print("use this short codes : cs - create a new user, vt - view credential, gp - generate password, dt - duplicate credential")
+
+                short_code = input().lower()
+
+                if short_code == 'cs':
+                    print("New User")
+                    print("-"*5)
+
+                    print ("First name ...")
+                    f_name = input(Enter your first name)
+
+                    print ("Last name ...")
+                    f_name = input(Enter your last name)
+
+                    print ("User name ...")
+                    f_name = input(Enter username)
+
+                    print ("password ...")
+                    pwd = input(password)
+                            break
+                
          
