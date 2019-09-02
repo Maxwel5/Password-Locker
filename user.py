@@ -39,7 +39,7 @@ class Credentials:
         '''
         Credential function
         '''
-        new_credential = Credential(user_name,account_name,password)
+        new_credential = Credential(user_name,site_name,account_name,password)
         return new_credential
 
     def save_credential(credential):
@@ -53,4 +53,10 @@ class Credentials:
         Function to view the saved credentials by the user
         '''
         return Credential.view_credentials(user_name)
+
+    def duplicate_credential(site_name):
+        '''
+        Function that duplicates credentials details to the clipboard
+        '''
+        return Credentials.duplicate_credential(site_name)
          
