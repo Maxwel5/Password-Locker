@@ -1,8 +1,23 @@
 #!/usr/bin/env python3.6
 import pyperclip
-from user import User
 
 class User:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+    self.username = uname
+    self.password = psword
+
+  def printname(self):
+    print(self.firstname, self.lastname, self.username, self.password)
+
+class Credential(User):
+  def __init__(self, fname, lname, uname, psword ):
+    super().__init__(fname, lname, uname, psword)
+    self.credential = credential
+
+  def hi(self):
+    print("Hi", self.firstname, self.lastname, "to your acount", self.username, self.password)
     # Providing user details
 
     def create_user(self,fname,lname,username,psword):
@@ -68,14 +83,14 @@ class Credentials:
 
     def main():
         print("Hi! This is your password locker. Your name please")
-            user_name = input()
+        user_name = input()
 
             print(f"Hi {user_name}. Do what you like")
 
             print('\n')
 
             while True:
-                print("use this short codes : cs - create a new user, vt - view credential, gp - generate password, dt - duplicate credential")
+                print("use this short codes : cs - create a new user, vs - view user, fs - find user, gp - generate password, dt - duplicate credential")
 
                 short_code = input().lower()
 
@@ -94,6 +109,36 @@ class Credentials:
 
                     print ("password ...")
                     pwd = input(password)
-                            break
+
+                    save_users(create_user(fname,lname,username,psword))
+
+                    print ('\n')
+                    print(f"New User {fname} {lname} created")
+                    print ('\n')
+                elif short_code == 'vs':
+
+                    if view_users():
+                        print("This is a group of users available")
+                        print('\n')
+
+                        for user in view_users():
+                            print(f"{user.first_name} {user.last_name} .....{user.user_name}")
+                        print('\n')
+
+                    else:
+                        print('\n')
+                        print("No saved users")
+                        print('\n')
+
+                elif short_code == 'fs':
+                    print("Enter user name you want to find")
+                    
+                    find_user = input()
+                    if check_existing_user(find_username)
+
+                        find_user = 
+
+
+
                 
          
