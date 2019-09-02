@@ -18,4 +18,13 @@ class User:
         Function to save/store new user details
         '''
         User.save_user
+
+    def justify_user(user_name,password):
+        '''
+        Functin to identify the actual account user
+        '''
+        detecting _user = Credential.detect_user(user_name,password)
+        return detecting_user
+
+    
          
