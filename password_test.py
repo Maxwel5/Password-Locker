@@ -104,6 +104,19 @@ class TestIUser(unittest.TestCase):
         for contact in cls.contact_list:
             if contact.phone_number == number:
                 return contact
+    
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user"," "," ") 
+        test_user.save_user()
+
+        user_exists = User.user_exist(" ")
+
+        self.assertTrue(user_exists)
 
 if __name__ ==  '__main__':
     unittest.main()
