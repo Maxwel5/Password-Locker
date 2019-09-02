@@ -26,5 +26,12 @@ class User:
         detecting _user = Credential.detect_user(user_name,password)
         return detecting_user
 
-    
+    def generate_password():
+        '''
+        Function to generate self_password
+        '''
+        generate_password = Credential.generate_password()
+        return generate_password
+
+c
          
